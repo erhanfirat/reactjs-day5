@@ -16,6 +16,18 @@ const StudentList = () => {
     const [toggleStudentForm, setToggleStudentForm] = useState(false);
 
     const loadStudents = () => {
+        // const newStudents = [
+        //     { no: "1", name: "Ahmet" },
+        //     { no: "2", name: "Veli" },
+        //     { no: "3", name: "Murat" },
+        //     { no: "4", name: "Hüseyin" },
+        //     { no: "5", name: "Zehra" },
+        //     { no: "6", name: "Tülin" },
+        //     { no: "7", name: "Mustafa" },
+        //     { no: "3", name: "Mehmet" }
+        // ];
+        // bulkInsertStudentsAction(newStudents);
+
         setLoading(true);
         setTimeout(() => {
             const newStudents = [
@@ -42,7 +54,7 @@ const StudentList = () => {
         setToggleStudentForm(false);
     }
 
-    return <div className='student-list-container'>
+    return <div className='student-list-container' data-testid="StudentList">
         <div className='row'>
             <div className={toggleStudentForm ? 'col-6' : 'col-12'}>
                 <Card>
